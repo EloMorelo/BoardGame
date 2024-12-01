@@ -1,0 +1,18 @@
+import React, { useEffect, useRef } from 'react';
+import Phaser from 'phaser';
+import gameConfig from '../game/gameConfig';
+
+const PhaserGame = () => {
+  const gameContainer = useRef(null);
+
+  useEffect(() => {
+    const game = new Phaser.Game({ ...gameConfig, parent: gameContainer.current });
+    return () => {
+      game.destroy(true);
+    };
+  }, []);
+
+  return <div ref={gameContainer} style={{ width: '100%', height: '100%' }} />;
+};
+
+export default PhaserGame;
