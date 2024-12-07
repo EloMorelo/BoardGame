@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import Phaser from 'phaser';
-import gameConfig from '../game/gameConfig';
+import game from '../game/index';
 
 const PhaserGame = () => {
   const gameContainer = useRef(null);
 
   useEffect(() => {
-    const game = new Phaser.Game({ ...gameConfig, parent: gameContainer.current });
+    game.parent = gameContainer.current;
     return () => {
       game.destroy(true);
     };

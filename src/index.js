@@ -1,5 +1,6 @@
-import Phaser from 'phaser';
-import gameConfig from './game/gameConfig';
-
-const game = new Phaser.Game(gameConfig);
-export default game;
+import React from 'react';
+import { createRoot } from 'react-dom/client'; // Import createRoot
+import App from './App';
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+root.render(<App />);

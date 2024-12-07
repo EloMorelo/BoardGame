@@ -1,9 +1,10 @@
 import React from 'react';
-import PhaserGame from './components/PhaserGame';
+import PhaserGame from './components/PhaserGame.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <h1>Hex Grid Game</h1>
       <PhaserGame />
     </div>
   );
